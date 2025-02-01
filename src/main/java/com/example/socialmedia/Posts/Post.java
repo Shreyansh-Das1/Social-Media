@@ -16,7 +16,7 @@ public class Post {
     String caption;
     int likes;
     @OneToMany
-    ArrayList<Comment> cmt;
+  //  ArrayList<Comment> cmt;
     @ManyToOne
     @JoinColumn(name = "user_username", nullable = false)
     private Users user;
