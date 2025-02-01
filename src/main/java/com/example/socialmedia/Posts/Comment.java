@@ -1,5 +1,5 @@
 package com.example.socialmedia.Posts;
-
+/*
 import com.example.socialmedia.User.Users;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -15,4 +15,4 @@ public class Comment {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO) int id;
     User user;
-    }
+    }*/

@@ -21,5 +21,5 @@ public class Users {
     @JsonIgnore
     private String password;
 
-    ArrayList<Post> post;
+    //ArrayList<Post> post;
 }
