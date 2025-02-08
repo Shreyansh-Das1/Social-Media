@@ -1,15 +1,16 @@
 package com.example.socialmedia.User;
 
+//import com.example.socialmedia.Posts.Comment;
 import com.example.socialmedia.Posts.Post;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.ArrayList;
 
 @Entity
-@Getter @Setter
+@Data
 @Table(name = "Users")
 
 public class Users {
@@ -20,6 +21,8 @@ public class Users {
     private String bio;
     @JsonIgnore
     private String password;
-
-    //ArrayList<Post> post;
+    @OneToMany @Nullable
+    ArrayList<Post> post;
+    //@OneToMany  @Nullable
+    //ArrayList<Comment> comments;
 }

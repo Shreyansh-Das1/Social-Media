@@ -15,10 +15,9 @@ public class Post {
     byte[] media;
     String caption;
     int likes;
-    @OneToMany
+    //@OneToMany
   //  ArrayList<Comment> cmt;
-    @ManyToOne
-    @JoinColumn(name = "user_username", nullable = false)
-    private Users user;
+    //@JoinColumn(name = "user_username", nullable = false)
+
 
 }

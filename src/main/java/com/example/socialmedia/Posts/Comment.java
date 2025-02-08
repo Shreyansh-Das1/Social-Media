@@ -1,5 +1,5 @@
-package com.example.socialmedia.Posts;
-/*
+/*package com.example.socialmedia.Posts;
+
 import com.example.socialmedia.User.Users;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -11,8 +11,10 @@ import org.springframework.security.core.userdetails.User;
 @Entity
 @Table(name= "Comments")
 public class Comment {
-    String comment;
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO) int id;
+    @Id
+    String id;
     User user;
+    id= user.getUsername();
+    String comment;
     }*/

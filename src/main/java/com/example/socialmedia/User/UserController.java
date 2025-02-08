@@ -19,7 +19,7 @@ class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Users> login(
+    public @ResponseBody ResponseEntity<Users> login(
             @RequestParam String email,
             @RequestParam String password
     ) {
