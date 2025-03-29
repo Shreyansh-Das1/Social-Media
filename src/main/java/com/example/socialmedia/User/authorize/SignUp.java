@@ -31,6 +31,7 @@ public class SignUp {
         user.setEmail(email);
         user.setPassword(encrypter.encryptPassword(password));
         user.setUsername(username);
+        user.setBio("Hi");
         userepo.save(user);
         return new ResponseEntity<>("User created", HttpStatus.CREATED);
     }

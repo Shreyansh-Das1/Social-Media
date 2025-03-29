@@ -17,12 +17,11 @@ public class Users {
 
     @Id private String username;
     @Column(unique = true, nullable = false)
-    private String email;
-    private String bio;
+    @Nullable private String email,  bio;
     @JsonIgnore
     private String password;
-    @OneToMany @Nullable
-    ArrayList<Post> post;
+    //@OneToMany @Nullable @JsonIgnore
+    //ArrayList<Post> post;
     //@OneToMany  @Nullable
     //ArrayList<Comment> comments;
 }

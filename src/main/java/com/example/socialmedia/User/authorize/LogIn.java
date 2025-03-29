@@ -19,7 +19,7 @@ public class LogIn {
         if(userepo.existsByEmail(email)) {
             Users user = userepo.findByEmail(email);
 
-            if (encrypter.encryptPassword(password).equals(user.getPassword()))
+            if (encrypter.verify(password, user.getPassword()))
                 return new ResponseEntity<>(user, HttpStatus.OK);
             else
                 return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
