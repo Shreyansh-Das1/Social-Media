@@ -21,11 +21,7 @@ public class SignUp {
 
     public ResponseEntity<String> createUser(String email, String password, String username)
     {
-        if(userepo.existsByEmail(email))
-            return new ResponseEntity<>("Email Already Exists", HttpStatus.CONFLICT);
 
-        if(userepo.existsByUsername(username))
-            return new ResponseEntity<>("Username Already Exists", HttpStatus.CONFLICT);
 
         Users user = new Users();
         user.setEmail(email);

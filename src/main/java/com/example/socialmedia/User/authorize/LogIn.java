@@ -16,15 +16,14 @@ public class LogIn {
     private Encrypter encrypter;
 
     public ResponseEntity<Users> logIn(String email, String password) {
-        if(userepo.existsByEmail(email)) {
+
             Users user = userepo.findByEmail(email);
 
             if (encrypter.verify(password, user.getPassword()))
                 return new ResponseEntity<>(user, HttpStatus.OK);
             else
-                return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-        }
-        else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>(null,HttpStatus.UNAUTHORIZED);
+
     }
 
 }
